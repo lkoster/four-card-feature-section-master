@@ -1,0 +1,211 @@
+:root {
+  /* Primary Colors */
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --neutral-very-dark-blue: hsl(234, 12%, 34%);
+  --neutral-grayish-blue: hsl(229, 6%, 66%);
+  --neutral-very-light-gray: hsl(0, 0%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS Set up */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  /* To change rem to 10base */
+  font-size: 62.5%;
+}
+
+body {
+  /* Base body set up */
+  /* Centers the card vertically in the middle of the page */
+  min-height: 100svh;
+  /* To reset base font size to 16px or base body font size for page*/
+  font-size: 1.5rem;
+  /* - */
+
+  /* Main Styles - Update Values and uncomment*/
+  font-family: 'Poppins', sans-serif;
+  color: MAIN COLOR;
+  background-color: MAIN BG COLOR;
+
+  /* Optional - To align container in the middle of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.ff-bold {
+  font-weight: 600;
+}
+
+.ff-light {
+  font-weight: 200;
+  color: var(--neutral-very-dark-blue);
+}
+
+.br-5px {
+  border-radius: 5px;
+}
+
+.border-cyan {
+  border-top: 3px solid var(--primary-cyan);
+}
+
+.border-red {
+  border-top: 3px solid var(--primary-red);
+}
+
+.border-orange {
+  border-top: 3px solid var(--primary-orange);
+}
+
+.border-blue {
+  border-top: 3px solid var(--primary-blue);
+}
+
+/* grid row 4 / grid col 3 */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header h2 {
+  font-size: 3.6rem;
+}
+
+.header p {
+  color: var(--neutral-grayish-blue);
+  width: 65%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px; /* Adjust gap as needed */
+  align-items: start;
+  justify-content: center;
+  max-width: 100rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+}
+.card p {
+  color: var(--neutral-grayish-blue);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  height: 6rem;
+  width: 6rem;
+  align-self: flex-end;
+}
+
+/* 1 Supervisor */
+.card:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+/* 2 Team Builder */
+.card:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+/* 3 Karma */
+.card:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+}
+
+/* 4 Calculator */
+.card:nth-child(4) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin: 9rem 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+  /* 1 Supervisor */
+  .card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  /* 2 Team Builder */
+  .card:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  /* 3 Karma */
+  .card:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  /* 4 Calculator */
+  .card:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 465px) {
+  .header h2 {
+    font-size: 2.6rem;
+  }
+
+  .header p {
+    color: var(--neutral-grayish-blue);
+    width: 75%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
