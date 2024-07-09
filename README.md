@@ -23,5 +23,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/lkoster/four-card-feature-section-master)
+- Live Site URL: [https://lkoster.github.io/four-card-feature-section-master/](https://lkoster.github.io/four-card-feature-section-master/)

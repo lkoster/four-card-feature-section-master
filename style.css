@@ -41,8 +41,8 @@ body {
 
   /* Main Styles - Update Values and uncomment*/
   font-family: 'Poppins', sans-serif;
-  color: MAIN COLOR;
-  background-color: MAIN BG COLOR;
+  color: var(--neutral-very-dark-blue);
+  background-color: var(--neutral-very-light-gray);
 
   /* Optional - To align container in the middle of the screen */
   display: flex;
@@ -106,9 +106,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 20px; /* Adjust gap as needed */
+  gap: 20px;
   align-items: start;
-  justify-content: center;
+  /* justify-content: center; */
   max-width: 100rem;
 }
 
@@ -116,9 +116,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 4.5rem;
   padding: 2rem;
+  background-color: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .card h3 {
@@ -172,6 +179,10 @@ body {
     padding: 0 3rem;
   }
 
+  .card {
+    /* min-height: 25rem; */
+  }
+
   /* 1 Supervisor */
   .card:nth-child(1) {
     grid-column: 1 / 2;
@@ -204,7 +215,6 @@ body {
 
   .header p {
     color: var(--neutral-grayish-blue);
-    width: 75%;
     text-align: center;
     margin-top: 1rem;
   }
